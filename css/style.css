@@ -1,0 +1,107 @@
+
+body {
+    background: skyblue;
+}
+
+
+#header {
+}
+
+#header .inner {
+    display: flex;
+    height: 65px;
+    line-height: 60px;
+    background: #fff;
+}
+
+#header .inner h1 {
+    margin: 0 0 0 150px;
+}
+
+#header .inner a {
+    margin: 0 0 0 70px;
+}
+
+#header a {
+    display: block;
+}
+
+#header .gnb {
+    margin: 0 0 0 0;
+}
+
+#header .gnb>ul {
+    display: flex;
+    margin: 0 10px 0 10px;
+}
+
+/* 메뉴 일렬로 배치 */
+
+#header .service {
+    font-size:18px;
+    font-weight: 600;
+    display: flex;
+    margin: 0 200px 0 auto;
+}
+
+#header .service .span {
+    gap: 200px;
+}
+
+
+
+
+#header .gnb>ul>li {
+    position: relative;
+}
+
+#header .gnb>ul>li>a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#header .sub {
+
+    font-size: 13px;
+    height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+    text-align: center;
+    width: 100%;
+    line-height: 60px;
+
+    transition: 0.5s;
+}
+
+#header .gnb:hover>ul>li .sub {
+    height: 200px;
+}
+
+/* #header .gnb {
+    * position: relative; 
+} */
+
+#header .gnb::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 2px solid red;
+    background: #fff;
+    z-index: 999;
+
+    transition: 0.5s;
+
+}
+
+#header .gnb:hover::before {
+    height: 300px;
+}
