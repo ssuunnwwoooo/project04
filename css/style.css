@@ -1,96 +1,122 @@
-
-body {
-    background: skyblue;
-}
+body {}
 
 
-#header {
-}
+#header {}
 
 #header .inner {
+
     display: flex;
-    height: 65px;
+    max-width: 1700px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 60px;
     line-height: 60px;
     background: #fff;
 }
 
-#header .inner h1 {
-    margin: 0 0 0 150px;
-}
+#header .inner h1 {}
 
-#header .inner a {
-    margin: 0 0 0 70px;
-}
+
 
 #header a {
     display: block;
 }
 
 #header .gnb {
-    margin: 0 0 0 0;
+    margin: 0 0 0 250px;
 }
 
 #header .gnb>ul {
     display: flex;
-    margin: 0 10px 0 10px;
+    gap: 65px;
 }
 
 /* 메뉴 일렬로 배치 */
 
-#header .service {
-    font-size:18px;
-    font-weight: 600;
+#header .service>* {
     display: flex;
-    margin: 0 200px 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    gap: 20px;
+    margin: 0 0 0 200px;
 }
 
-#header .service .span {
-    gap: 200px;
+#header .service i {
+    font-size: 25px;
 }
-
-
 
 
 #header .gnb>ul>li {
     position: relative;
+
 }
 
 #header .gnb>ul>li>a {
     font-size: 18px;
     font-weight: 600;
+    color: #333;
 }
 
 #header .sub {
+    /* border: 1px solid blue; */
 
-    font-size: 13px;
+    font-size: 15px;
     height: 0;
     overflow: hidden;
 
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 999;
 
     text-align: center;
-    width: 100%;
-    line-height: 60px;
+
+    line-height: 30px;
+    letter-spacing: -1px;
+
+    font-weight: 400;
+
+    color: #666;
 
     transition: 0.5s;
 }
 
-#header .gnb:hover>ul>li .sub {
-    height: 200px;
+
+#header .sub>li a {
+    white-space: nowrap;
 }
 
-/* #header .gnb {
-    * position: relative; 
+/* #header .sub>ul>li {
+    position: relative;
+}
+
+#header .sub>ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 12px;
+    background: #ddd;
 } */
+
+#header .sub>li:hover {
+    color: rgb(197, 0, 0);
+    font-weight: 500;
+
+}
+
+#header .gnb:hover>ul>li .sub {
+    height: 220px;
+}
 
 #header .gnb::before {
     content: "";
     position: absolute;
-    top: 65px;
+    top: 60px;
     left: 0;
     width: 100%;
     height: 0;
@@ -103,5 +129,141 @@ body {
 }
 
 #header .gnb:hover::before {
-    height: 300px;
+    height: 220px;
 }
+
+
+/* 탑 배너 끝 */
+
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .main_slide {}
+
+.main_visual .main_slide figure {
+    position: relative;
+    height: 909px;
+}
+
+.main_visual .main_slide .itm01 {
+    background: url(../images/vis_bg_01_2021.jpg)no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm02 {
+    background: url(../images/vis_bg_02_202205.jpg)no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm03 {
+    background: url(../images/vis_bg_03_2021.jpg)no-repeat center center/cover;
+}
+
+.main_visual .main_slide .itm04 {
+    background: url(../images/vis_bg_04_2022.jpg)no-repeat center center/cover;
+}
+
+
+
+.main_visual .main_slide .slogan {
+    position: absolute;
+    top: 95%;
+    left: 110%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    padding: 0px 50px -500px;
+}
+
+.main_visual .main_slide .slogan strong {
+    font-size: 14px;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+    background-color: black;
+}
+
+.main_visual .main_slide .slogan a {
+    font-size: 14px;
+
+    background: #fff;
+    color: black;
+    padding: 5px 25px 4px 25px;
+}
+
+
+/* ↓ 버튼 ↓ */
+
+.main_visual .arrows {
+    display: block;
+    position: absolute;
+    top: 89%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    max-width: 113px;
+    width: 100%;
+}
+
+
+
+.main_visual .arrows i {
+    font-size: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.555);
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+.main_visual .arrows i:hover {
+    color: red;
+    background: #fff;
+}
+
+.main_visual .arrows .left {
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+
+.main_visual .arrows .right {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.main_visual .controll {
+    display: block;
+    position: absolute;
+    top: 89%;
+    left: 48%;
+    transform: translate(7%, -50%);
+    max-width: 143px;
+    width: 100%;
+}
+
+
+.main_visual .controll i {
+    font-size: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.555);
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+.main_visual .controll i:hover {
+    color: red;
+    background: #fff;
+}
+
+.main_visual .controll .play {
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+.main_visual .controll .pause {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+/* 클릭 후 색상 유지하는 법 찾기 */
