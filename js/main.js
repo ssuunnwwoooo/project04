@@ -6,6 +6,7 @@ $(function () {
         autoplay: true,
         pauseOnHover: false,
         pauseOnFocus: false,
+        fade: true,
     });
 
 
@@ -18,11 +19,13 @@ $(function () {
         $('.main_slide').slick('slickNext');
     });
 
-    $('.main_visual .controll .play').on('click', function () {
+    $('.main_visual .arrows .play').on('click', function () {
         $('.main_slide').slick('play');
+        $(this).addClass('on').siblings().removeClass('on')
     });
-    $('.main_visual .controll .pause').on('click', function () {
+    $('.main_visual .arrows .pause').on('click', function () {
         $('.main_slide').slick('pause');
+        $(this).addClass('on').siblings().removeClass('on')
     });
 
 
